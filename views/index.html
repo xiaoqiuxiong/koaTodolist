@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="/static/index.css">
+  <title>{{datas.appName}}</title>
 </head>
+
 <body>
-  首页
+  <h1>{{datas.appName}}</h1>
+  <hr>
+  <hr>
+  <hr>
+  <div class="tools">
+    <a href="/add">添加任务</a>
+  </div>
+  <ul>
+    {% for item in datas.tasks %}
+    <li>
+      [{{item.id}}] - 
+      {{item.title}} - 
+      {% if item.isDon %}
+      <span class="finished">完成</span>
+      {% else %}
+      <span class="unfinished">未完成</span>
+      {% endif %} 
+      <button onclick="click_changeStatus({{item.id}})" class="change-status">改变状态</button>
+      <button onclick="click_del({{item.id}})" class="change-status">删除任务</button>
+      </li>
+    <hr>
+    {% endfor %}
+  </ul>
+
+  <script>
+    function click_changeStatus(id) {
+      window.location.href = `/change/${id}`
+    }
+    function click_del(id) {
+      window.location.href = `/del/${id}`
+    }
+  </script>
 </body>
+
 </html>

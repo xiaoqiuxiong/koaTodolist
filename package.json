@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.10.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static-cache": "^5.1.2",
     "koa-swig": "^2.2.1",

@@ -1,0 +1,75 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body{
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+}
+h1{
+  color: #fff;
+  background-color: #666;
+  text-align: center;
+}
+li{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.finished{
+  color: rgb(104, 204, 5);
+}
+.unfinished{
+  color: rgb(153, 21, 21);
+}
+.tools{
+  padding-top: 10px;
+  text-align: right;
+}
+.add-box{
+  display: flex;
+  margin-top: 20px;
+}
+.add-box input{
+  height: 30px;
+  line-height: 30px;
+  flex: 1;
+  padding-left: 10px;
+}
+.add-box button{
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  width: 120px;
+  cursor: pointer;
+  color: #fff;
+  background: dodgerblue;
+  margin-left: 10px;
+  border: 0;
+}
+.add-box button:hover{
+  opacity: 0.9;
+}
+.msg{
+  padding: 20px;
+  text-align: center;
+}
+.msg.danger{
+  color: red;
+}
+.msg.warning{
+  color: orange;
+}
+.msg.success{
+  color: yellowgreen;
+}
+.link{
+  text-align: center;
+}
+.change-status{
+  float: right;
+  cursor: pointer;
+}
